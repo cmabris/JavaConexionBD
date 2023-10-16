@@ -1,15 +1,14 @@
 import java.sql.*;
+import datos.Conexion;
 
 public class Main {
     public static void main(String[] args) {
 
-        String url = "jdbc:mysql://localhost:3306/empleadoss_departamentoss";
-
         try {
 
-            Connection conexion = DriverManager.getConnection(url, "root", "root");
+            Connection conn = Conexion.getConnection();
 
-            Statement instruccion = conexion.createStatement();
+            Statement instruccion = conn.createStatement();
 
             String sql = "SELECT nomEmp, fecNac, salEmp FROM empleados";
 
@@ -24,9 +23,9 @@ public class Main {
 
             }
 
-            resultado.close();
-            instruccion.close();
-            conexion.close();
+            Conexion.close(resultado);
+            Conexion.close(instruccion);
+            Conexion.close(conn);
 
         } catch (SQLException ex) {
 
