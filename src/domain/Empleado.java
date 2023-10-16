@@ -128,4 +128,20 @@ public class Empleado {
     public void setCodDept(String codDept) {
         this.codDept = codDept;
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "idEmpleado='" + idEmpleado + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", sexo=" + sexo +
+                ", fecNac=" + fecNac +
+                ", fecIncorporacion=" + fecIncorporacion +
+                ", salario=" + salario +
+                ", comision=" + comision +
+                ", cargo='" + cargo + '\'' +
+                ", jefeId='" + jefeId + '\'' +
+                ", codDept='" + codDept + '\'' +
+                '}';
+    }
 }
