@@ -1,6 +1,6 @@
 package domain;
 
-import java.util.Date;
+import java.sql.*;
 
 public class Empleado {
 
@@ -65,8 +65,8 @@ public class Empleado {
         this.nombre = nombre;
     }
 
-    public char getSexo() {
-        return sexo;
+    public String getSexo() {
+        return String.valueOf(sexo);
     }
 
     public void setSexo(char sexo) {
